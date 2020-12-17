@@ -1,0 +1,107 @@
+{
+    "id": "O8t063AUt03dztgWWUhG",
+    "name": "My remote UNIT!",
+    "dod": "",
+    "description": "remoteee",
+    "summary": "",
+    "hunksOrder": [
+        "src/types.ts_0",
+        "src/types.ts_1",
+        "src/version.ts_0"
+    ],
+    "tests": [],
+    "hints": [],
+    "play_mode": "walkthrough",
+    "swimmPatch": {
+        "src/types.ts": {
+            "diffType": "MODIFIED",
+            "fileDiffHeader": "diff --git a/src/types.ts b/src/types.ts\nindex 893feb5..893feb5 100644\n--- a/src/types.ts\n+++ b/src/types.ts",
+            "hunks": [
+                {
+                    "swimmHunkMetadata": {
+                        "hunkComments": []
+                    },
+                    "hunkDiffLines": [
+                        "@@ -4,24 +4,6 @@",
+                        " ",
+                        " export type RequestParameters = OctokitTypes.RequestParameters;",
+                        " ",
+                        "-export type OctokitOptions = {",
+                        "-  // TODO: add types for authStrategy & auth options and octokit.auth() method,",
+                        "-  //       see https://tinyurl.com/typescript-auth-strategies",
+                        "-  authStrategy?: any;",
+                        "-  auth?: any;",
+                        "-  userAgent?: string;",
+                        "-  previews?: string[];",
+                        "-  baseUrl?: string;",
+                        "-  log?: {",
+                        "-    debug: (message: string) => unknown;",
+                        "-    info: (message: string) => unknown;",
+                        "-    warn: (message: string) => unknown;",
+                        "-    error: (message: string) => unknown;",
+                        "-  };",
+                        "-  request?: OctokitTypes.RequestRequestOptions;",
+                        "-  timeZone?: string;",
+                        "-  [option: string]: any;",
+                        "-};",
+                        " ",
+                        " export type Constructor<T> = new (...args: any[]) => T;",
+                        " "
+                    ]
+                },
+                {
+                    "swimmHunkMetadata": {
+                        "hunkComments": []
+                    },
+                    "hunkDiffLines": [
+                        "@@ -28,24 +28,5 @@",
+                        " export type ReturnTypeOf<",
+                        "   T extends AnyFunction | AnyFunction[]",
+                        " > = T extends AnyFunction",
+                        "-  ? ReturnType<T>",
+                        "-  : T extends AnyFunction[]",
+                        "-  ? UnionToIntersection<ReturnType<T[number]>>",
+                        "-  : never;",
+                        "-",
+                        "-/**",
+                        "- * @author https://stackoverflow.com/users/2887218/jcalz",
+                        "- * @see https://stackoverflow.com/a/50375286/10325032",
+                        "- */",
+                        "-export type UnionToIntersection<Union> = (",
+                        "-  Union extends any ? (argument: Union) => void : never",
+                        "-) extends (argument: infer Intersection) => void // tslint:disable-line: no-unused",
+                        "-  ? Intersection",
+                        "-  : never;",
+                        "-",
+                        "-type AnyFunction = (...args: any) => any;",
+                        "-",
+                        "-export type OctokitPlugin = (",
+                        "-  octokit: Octokit,",
+                        "   options: OctokitOptions",
+                        " ) => { [key: string]: any } | void;"
+                    ]
+                }
+            ]
+        },
+        "src/version.ts": {
+            "diffType": "MODIFIED",
+            "fileDiffHeader": "diff --git a/src/version.ts b/src/version.ts\nindex 86383b1..86383b1 100644\n--- a/src/version.ts\n+++ b/src/version.ts",
+            "hunks": [
+                {
+                    "swimmHunkMetadata": {
+                        "hunkComments": [
+                            "just to show that a hunk of a single line in a file with a single line can be created :)"
+                        ]
+                    },
+                    "hunkDiffLines": [
+                        "@@ -1,1 +1,0 @@",
+                        "-export const VERSION = \"0.0.0-development\";"
+                    ]
+                }
+            ]
+        }
+    },
+    "app_version": "0.3.0",
+    "file_version": "1.0.4",
+    "last_commit_sha_for_swimm_patch": "e8acd95bfa86a3fac7552a89faec4c3cd30d66f1"
+}
