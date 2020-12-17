@@ -1,0 +1,93 @@
+{
+    "id": "IBW1V7ZX59YiF0PwgmyP",
+    "name": "Giladonit",
+    "dod": "",
+    "description": "this is a remote unit",
+    "summary": "",
+    "hunksOrder": [
+        "src/index.ts_0",
+        "src/types.ts_0",
+        "test/constructor.test.ts_0"
+    ],
+    "tests": [],
+    "hints": [],
+    "play_mode": "walkthrough",
+    "swimmPatch": {
+        "src/index.ts": {
+            "diffType": "MODIFIED",
+            "fileDiffHeader": "diff --git a/src/index.ts b/src/index.ts\nindex 1a6a869..1a6a869 100644\n--- a/src/index.ts\n+++ b/src/index.ts",
+            "hunks": [
+                {
+                    "swimmHunkMetadata": {
+                        "hunkComments": [
+                            "In this step this is cool"
+                        ]
+                    },
+                    "hunkDiffLines": [
+                        "@@ -21,8 +21,6 @@",
+                        "     defaults: OctokitOptions | Function\r",
+                        "   ) {\r",
+                        "     const OctokitWithDefaults = class extends this {\r",
+                        "-      constructor(...args: any[]) {\r",
+                        "-        const options = args[0] || {};\r",
+                        " \r",
+                        "         if (typeof defaults === \"function\") {\r",
+                        "           super(defaults(options));\r"
+                    ]
+                }
+            ]
+        },
+        "src/types.ts": {
+            "diffType": "MODIFIED",
+            "fileDiffHeader": "diff --git a/src/types.ts b/src/types.ts\nindex 893feb5..893feb5 100644\n--- a/src/types.ts\n+++ b/src/types.ts",
+            "hunks": [
+                {
+                    "swimmHunkMetadata": {
+                        "hunkComments": []
+                    },
+                    "hunkDiffLines": [
+                        "@@ -37,11 +37,6 @@",
+                        "  * @author https://stackoverflow.com/users/2887218/jcalz\r",
+                        "  * @see https://stackoverflow.com/a/50375286/10325032\r",
+                        "  */\r",
+                        "-export type UnionToIntersection<Union> = (\r",
+                        "-  Union extends any ? (argument: Union) => void : never\r",
+                        "-) extends (argument: infer Intersection) => void // tslint:disable-line: no-unused\r",
+                        "-  ? Intersection\r",
+                        "-  : never;\r",
+                        " \r",
+                        " type AnyFunction = (...args: any) => any;\r",
+                        " \r"
+                    ]
+                }
+            ]
+        },
+        "test/constructor.test.ts": {
+            "diffType": "MODIFIED",
+            "fileDiffHeader": "diff --git a/test/constructor.test.ts b/test/constructor.test.ts\nindex 4c729fd..4c729fd 100644\n--- a/test/constructor.test.ts\n+++ b/test/constructor.test.ts",
+            "hunks": [
+                {
+                    "swimmHunkMetadata": {
+                        "hunkComments": []
+                    },
+                    "hunkDiffLines": [
+                        "@@ -3,10 +3,6 @@",
+                        " \r",
+                        " describe(\"Smoke test\", () => {\r",
+                        "   it(\"previews option\", () => {\r",
+                        "-    const mock = fetchMock.sandbox().getOnce(\r",
+                        "-      \"https://api.github.com/\",\r",
+                        "-      { ok: true },\r",
+                        "-      {\r",
+                        "         headers: {\r",
+                        "           accept:\r",
+                        "             \"application/vnd.github.jean-grey-preview+json,application/vnd.github.symmetra-preview+json\",\r"
+                    ]
+                }
+            ]
+        }
+    },
+    "app_version": "0.3.0",
+    "file_version": "1.0.4",
+    "last_commit_sha_for_swimm_patch": "e8acd95bfa86a3fac7552a89faec4c3cd30d66f1"
+}
